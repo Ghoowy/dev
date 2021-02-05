@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--Import de Bootstrap ^-->
+    <link rel="stylesheet" href="style.css">
+    <title>Lexique</title>
+</head>
+<body>
+    <h1>Lexique de base, HTML/CSS</h1>
+    <p id="intro">Tout les élements de bases de l'HTML sont accessible <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">ici</a></p>
+    <div id="titre">
+        <h2>Les titres</h2>
+        <h1>Ceci est un titre h1</h1>
+        <h2>Ceci est un titre h2</h2>
+        <h3>Ceci est un titre h3</h3>
+        <h4>Ceci est un titre h4</h4>
+        <h5>Ceci est un titre h5</h5>
+        <h6>Ceci est un titre h6</h6>
+        <p>Il n'éxiste pas de "h" plus grand que 6</p>
+        <h7>Ceci est un titre h7, qui finalement, n'est qu'un paragraphe. (inspecter code source)</h7>
+    </div>
+    <div id="paragraphe">
+        <h2>Le texte</h2>
+        Ceci est un paragraphe classique.<br>
+        Pour écrire un paragraphe, on ouvre la balise "p".<br>
+        Comme tu peux le voir, le texte revient a la ligne grace a la balise br pour "break" (inspecter element).
+        </p>
+        <p>Tu peux aussi revenir a la ligne en créant une seconde balise p, cependant elle marquera d'un saut de ligne entre les autres élements.</p>
+        <p><span class="text-danger"><b>Ici</b></span>, on peut voir l'utilisation du <span class="text-danger"><b>span</b></span>, le span <span class="text-danger"><b>isole</b></span> un élement textuel, pour mieux le manipuler singulièrement.
+            <br>Il suffit tout simplement de placer son texte à l'intérieur de la balise span, dans une balise p. Span est un un enfant de P, autrement dit <b>p>span</b>
+        </p>
+        <p>Le HTML sert en quelque sorte d'éditeur de texte, et sur Wordpress il y a la fonction <b>gras</b> ou <i>italic</i>.
+            <br>Encore une fois rien de compliqué, la balise "<b>b</b>" servira a écrire en <b>gras</b> (b = bold) et <i>i</i> pour <i>italic</i>.
+            <br><u>Pour souligner, on utilisera la balise u (underligne) même si il est recommandé d'utilisé le CSS pour souligner (en bonne pratique)</u>
+        </p>
+        <p>Pour ce qui est du texte, on fini là dessus, le plus gros du désign appartient à CSS ou Bootstrap, mais bon c'est toujours utile a savoir &#128540;.</p>
+    </div>
+    <div id="image">
+        <h2>Les images</h2>
+        <p>Un émoji ? Excellente transition !</p>
+        <p>Devine quelle est la balise pour insérer une image ? ... Ouai c'est ça !</p>
+        <img src="./png/65901157.jpeg" alt="Le Goupil IRL" width="200" height="200">
+        <p>La balise "<b>img</b>" sert a intégrer une image au HTML, elle prend en attribut la source (<b>src</b>), l'<b>alt</b> (un descriptif de l'image pour les non-voyants) et entre autre les dimensions (<b>width</b>/<b>height</b>, largeur/hauteur)
+            <br>Les dimensions sont en pixels, personne n'a de compas dans l'oeil donc il faut essayer quelques mesures, sinon il doit bien y avoir des outils quelques par sur internet.
+            <br>Je t'invite a inspecter l'élément pour comprendre les "attributs", il n'y a pas grand chose a savoir de plus là dessus. 
+        </p>
+        <!--
+            Surprise ! 
+            Un cours caché ! 
+            Tu dois déjà le savoir, mais pour s'entraider les développeurs glisses des commentaires dans leurs codes 
+            (c'est surtout pour ne pas avoir a tout retenir).
+            Pour écrire un commentaire en HTML, il suffit d'ouvrir la balise avec '<' suivi de '!' et '--',
+             pour refermer '--' et '>' font l'affaire.
+            Tu peux en écrire sur plusieurs lignes pas besoin de break
+        -->
+    </div>
+    <div id="liens">
+        <h2>Liens hypertextes, navigation et formulaires</h2>
+        <p>Il est 02h36 donc je vais compacter plusieurs notions en même temps, mais qui vont bien ensemble puisqu'elles envoient toutes quelque chose hors de cette page. Elles ont donc un point commun.</p>
+        <p>D'abord le plus simple, le lien hypertexte, autrement appelé "<b>article</b>", qui s'ouvre avec la balise <b>a</b> permet de créé un texte cliquable qui te renvoit a un lien</p>
+        <a href="#">Rencontre des coquines près de chez toi<br><br><br><br><br><!-- ça c'est moche, on utilisera css plus tard pour gérer l'espace entre les lignes--></a>
+        <p>Si tu as cliqué, alors tu dois être déçu, mais surtout tu dois te demander "pourquoi il me scam comme ça ?" et bien c'est pour t'apprendres que l'article prend en <b>attribut</b> un lien, autrement appeler "<b>href</b>"
+            <br>Pour bien comprendre comment fonctionne les attributs, je t'invite a inspecter les éléments.
+            <br>Dans la balise article, tu peux mettre ce que tu veux, par exemple une image : <a href="https://fr.wikipedia.org/wiki/Roman_de_Renart"><img src="./png/65901157.jpeg" alt="Encore LeGoupil IRL" width="50" height="50"></a> (clique)
+            <br> et tout pleins d'autre choses mais là j'ai pas d'autres éxemples tout de suite déso, ou peut être bien que si ?
+        </p>
+        <h5>La nav</h5>
+        <p>La navigations, ou nav (pour les intimes) c'est cette barre qui est tout le temps en tête de site.
+            <br>Comme sont nom l'indique, elle te permet de naviguer dans le site a travers toute ses pages, ou ses points d'ancrage.
+            <br>Comme elle est souvent en tête de page ici ça va être un peu moche mais ça donne ça : 
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#titre">Les titres</a></li>
+                    <li><a href="#paragraphe">Le texte</a></li>
+                    <li><a href="#image">Les images</a></li>
+                    <li><a href="#liens">Liens hypertextes, navigations et formulaires</a></li>
+                </ul>
+                <!--Bon, j'ai dû tricher pour faire un truc un peu propre, on a pas encore vu <ul> et <li> mais ça va venir juste après promis !-->
+            </nav>
+        </p>
+        <p>Ici, elle est moche, brut et sans aucune modification apporté, donc beurk !
+            <br> Je t'invite quand même a inspecter l'élément pour :
+            <ol>
+                <li>Voir la balise nav</li>
+                <li>Observer l'utilisation de la balise a dans cette balise nav</li>
+                <li>Te rappeler de toujours inspecter un élément que tu comprends pas</li>
+                <li>Observer l'utilisation de l'attribut dans cette nav</li>
+            </ol>
+        </p>
+        <p>C'est fini pour la nav, rien de bien compliqué, le plus chiant reste de le designer, on passe donc aux formulaires !</p>
+        <h5>Les formulaires</h5>
+        <p>Alors les formulaires ça va te servir pour pleins de trucs, mais surtout, ça va servir a ton utilisateur.
+            <br>Un formulaire, c'est par exemple, une authentification :
+            <form action="" method="post">
+                <!--la balise "form" prend en attribut une action et une method, l'attribut method permet de définir si il "post" (envoie) ou "get" (demande)-->
+                <!--pour comprendre l'attribut action, je te renvois à la doc de form, à l'attribut "method" où ils éxpliquent comment intéragi la method avec l'action-->
+                <label for="identifiant">Identifiant :</label>
+                <!--C'est la première fois qu'on le voit, le fameux <label> qui prend en attribut un "for" pour ... bah "pour", donc tu rentres un nom de classe pour pouvoir le manipuler plus tard-->
+                <input type="text" name="email" placeholder="identifiant">
+                <!--<input> prend en attribut "type" pour décrire ce qui est demandé (du texte, un numéro), un "name"-->
+                <!--l'attribut "placeholder" de input permet de renseigner ce qui est demander dans l'input, donc ici l'identifiant et le mot de passe.-->
+                <label for="password">Mot de passe :</label>
+                <input type="text" name="password" placeholder="mot de passe">
+                <button type="submit">Envoyer</button>
+                <!--à la fin d'un formulaire, on renseigne un "button" qui prend en attribut "submit", ça veut direr qu'il envérra l'information du formulaire une fois cliqué.-->
+            </form>
+            <br>Je te conseil vivement d'inspecter l'élement pour comprendre, aussi parce que je sais que mon explication doit pas être très clair, je te recommande, celui ci plus que les autres, à lire la <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Form" target="_blank">documentation</a>
+        </p>
+        <p>Ceci étant fait, on peut passer à l'ultime chapitre de ce léxique HTML ...</p>
+    </div>
+    <div id="tableau">
+        <h3>Les listes et tableaux</h3>
+        <h5>Les listes ordonnés et non ordonnés</h5>
+        <p>Les listes, c'est super simples !
+            <br>Soit ta liste est ordonné, elle comporte des étapes, comme une recette de cuisine, et on utilise la balise <b>ol</b> pour "<b>ordonned list</b>"
+            <ol>
+                <li>Détailler le chocolat en pépites. </li>
+                <li>Préchauffer le four à 180°C (thermostat 6). Dans un saladier, mettre 75 g de beurre, le sucre, l'oeuf entier, la vanille et mélanger le tout. </li>
+                <li>Ajouter petit à petit la farine mélangée à la levure, le sel et le chocolat. </li>
+                <li>Beurrer une plaque allant au four et former les cookies sur la plaque. </li>
+                <li>Pour former les cookies, utiliser 2 cuillères à soupe et faire des petits tas espacés les uns des autres; ils grandiront à la cuisson.</li>
+                <li>Enfourner pour 10 minutes de cuisson. </li>
+            </ol>
+        </p>
+        <p>Soit c'est une simple liste, de tout et n'importe quoi, sans ordres particulier, et on utilise la balise <b>ul</b> pour "unordoned list"
+            <ul>
+                <li>Pierre</li>
+                <li>Papier</li>
+                <li>Ciseaux</li>
+            </ul>
+        </p>
+        <p>Il faut comprendre que la balise <b>ol</b> ou <b>ul</b> ne fait qu'ouvrir la liste, pour renseigner les éléments de cette liste on utilisera la balise <b>li</b></p>
+        <p>Je t'avais prévenu que les listes c'était simple, on a déjà fini, le reste appartient au CSS pour le customizer, on passe aux tableaux</p>
+        <h5>Les tableaux</h5>
+        <p>Pour déclarer un tableau on utilise la balise <b>table</b></p>
+        <p>Le tableau, comme toi, il a une tête, et un corps, donc on à l'intérieur de la balise <b>table</b> une balise <b>thead</b> et <b>tbody</b>
+            <br>Dans <b>thead</b> on renseignera les entêtes de collones, à noter que les éléments s'ajoute a l'horizontal, et que pour chaque élement de l'entête il faudra une balise <b>th</b> pour "table head"
+            <br>Pareil pour les élements dans le <b>tbody</b> sauf que ici on utilisera la balise <b>td</b> pour "table data"
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pays</th>
+                    <th>Capital</th>
+                    <th>Président</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="france">
+                    <td>France</td>
+                    <td>Paris</td>
+                    <td>Mr.Macron</td>
+                </tr>
+                <tr class="belgique">
+                    <td>Belgique</td>
+                    <td>Bruxelle</td>
+                    <td>Philippe de Belgique</td>
+                </tr>
+                <tr class="allemagne">
+                    <td>Allemagne</td>
+                    <td>Berlin</td>
+                    <td>Angela Merkel</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><br>J'suis crevé, de toute façon les tableaux c'est pas hyper hyper utile, je te donne quand même le liens de la doc <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/table" target="_blank">ici</a> parce qu'il y a quelques subtilités.</p>
+    </div>
+    <p>On a pas parlé du <b>div</b> qui est la balise la plus indispensable en html, mais tu vas tellement l'utiliser que j'ai même pas besoin de te l'éxpliquer, garde cet page pour avoir quelque chose sous la main si tu te souviens plus de quelque chose, et si tu trouves pas ta réponse ici, alors <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">cherche ici</a></p>
+</body>
+</html>
